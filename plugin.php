@@ -8,6 +8,21 @@ Description: Faciliter l'obtention des champs ACF dans Oxygen grâce à un élé
 Version: 1.1
 */
 
+require 'plugin-update-checker/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://github.com/mgtactik/tactik-elements-for-oxygen/',
+	__FILE__,
+	'tactik-elements-for-oxygen'
+);
+
+//Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('main');
+
+//Optional: If you're using a private repository, specify the access token like this:
+$myUpdateChecker->setAuthentication('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');
+
 add_action('plugins_loaded', 'my_oxygen_elements_init');
 
 function my_oxygen_elements_init()
