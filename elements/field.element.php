@@ -72,17 +72,8 @@ class FieldElement extends OxyEl {
         if (is_array($fieldValue) && isset ( $fieldValue['url'] )) {
         $fieldLink = ($options['html_tag'] == "a") ? $fieldValue['url'] : null;
         }
-        /*if ($options['html_tag'] == "a") {
-            var_dump($fieldValue['url']);
-            //$fieldLink = $fieldValue["url"];
-        } else {
-            $fieldLink = null;
-        }*/
 
         if(isset($fieldLink)) {
-        /*if(str_starts_with($fieldLink, "/")) {
-            $fieldLink = home_url() . $fieldLink;
-        }*/
         $options['field_link'] = $fieldLink;
     }
 
