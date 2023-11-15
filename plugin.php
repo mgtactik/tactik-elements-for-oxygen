@@ -20,9 +20,6 @@ $myUpdateChecker = PucFactory::buildUpdateChecker(
 //Set the branch that contains the stable release.
 $myUpdateChecker->setBranch('main');
 
-//Optional: If you're using a private repository, specify the access token like this:
-$myUpdateChecker->setAuthentication('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');
-
 add_action('plugins_loaded', 'my_oxygen_elements_init');
 
 function my_oxygen_elements_init()
