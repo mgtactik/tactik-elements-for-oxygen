@@ -5,7 +5,7 @@ Plugin Name: Tactik Elements for Oxygen
 Author: Marc-Gabriel
 Author URI: https://tactikmedia.com
 Description: Faciliter l'obtention des champs ACF dans Oxygen grâce à un élément prévu à cet effet.
-Version: 1.0.1
+Version: 1.0.2
 */
 
 require 'plugin-update-checker/plugin-update-checker.php';
@@ -19,6 +19,9 @@ $myUpdateChecker = PucFactory::buildUpdateChecker(
 
 //Set the branch that contains the stable release.
 $myUpdateChecker->setBranch('main');
+
+//Optional: If you're using a private repository, specify the access token like this:
+$myUpdateChecker->setAuthentication('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');
 
 add_action('plugins_loaded', 'my_oxygen_elements_init');
 
